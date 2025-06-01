@@ -54,10 +54,8 @@ def find_large_files_in_paths(paths_to_scan, min_size_mb=100):
                 dirnames: Una lista de los nombres de los subdirectorios que se encuentran directamente en dirpath.
                 filenames: Una lista de los nombres de los archivos que se encuentran directamente en dirpath.
                 '''
-                print(len(dirnames))
                 # Filtrar los directorios excluidos
                 dirnames[:] = [d for d in dirnames if d not in excluded_dirs]
-                print(len(dirnames))
 
                 for filename in filenames:
                     file_path = os.path.join(dirpath, filename)
